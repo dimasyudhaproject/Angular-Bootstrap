@@ -18,7 +18,7 @@
 
 ### 🏠 [Homepage](https://github.com/dimasyudhaproject/fsdimasyudha)
 
-### ✨ [Demo]()
+### ✨ [Demo](https://dimasyudhapratama.herokuapp.com/)
 
 ## Prerequisites
 
