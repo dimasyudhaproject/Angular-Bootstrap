@@ -55,7 +55,7 @@ json-server --watch db.json
 
 * Website: https://github.com/dimasyudhaproject/
 * Twitter: [@dmsydha](https://twitter.com/fsdimasyudha)
-* Github: [@dimasyudhaofficial](https://github.com/fsdimasyudha)
+* Github: [@fsdimasyudha](https://github.com/fsdimasyudha)
 * LinkedIn: [@dimas-yudha-pratama-a4a665216](https://linkedin.com/in/dimas-yudha-pratama-a4a665216)
 
 ## 🤝 Contributing
