@@ -16,7 +16,7 @@
 
 > This project dedicates to PT Mitra Mandiri Informatika for technical testing purpose which aims to build an admin panel website application using CSS framework which is Bootstrap & JS framework which is Angular with CRUD concept procedure.
 
-### 🏠 [Homepage](https://github.com/dimasyudhaproject/fsdimasyudha)
+### 🏠 [Homepage](https://github.com/fsdimasyudha)
 
 ### ✨ [Demo](https://dimasyudhapratama.herokuapp.com/)
 
@@ -43,7 +43,7 @@ npm update
 npm serve -o
 ```
 
-# Run database side
+## Run database side
 
 ```sh
 json-server --watch db.json
