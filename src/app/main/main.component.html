@@ -1,0 +1,166 @@
+<nav class="navbar navbar-light bg-dark">
+  <div class="container-fluid">
+    <h1 style="color: white; font-size: xx-large;">dimasyudha</h1>
+    <div class="d-flex">
+      <button (click)="clickAddExpense()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-light">Add Expense</button>
+    </div>
+  </div>
+</nav>
+
+<table class="table mt-3">
+  <thead>
+    <tr>
+      <th scope="col">Procurement Number</th>
+      <th scope="col">Department</th>
+      <th scope="col">Procurement Name</th>
+      <th scope="col">Method</th>
+      <th scope="col">Stages</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of expenseData">
+      <td>{{row.procNo}}</td>
+      <td>{{row.div}}</td>
+      <td>{{row.procNm}}</td>
+      <td>{{row.mthd}}</td>
+      <td>{{row.stg}}</td>
+      <td>{{row.sts}}</td>
+      <td>
+        <button (click)="updateExpenses(row)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-dark">Modify</button>
+        <button (click)="deleteExpenses(row)" class="btn btn-dark mx-3">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Expense Details</h4>
+        <button type="button" id="close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <h5 class="modal-title mb-3" id="exampleModalLabel">General Information</h5>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Procurement Number</label>
+            <input type="number" formControlName="procNo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlSelect1">Department</label>
+            <select formControlName="div" class="form-select" id="exampleFormControlSelect1">
+              <option selected>Div IT</option>
+              <option>Div Procurement</option>
+              <option>Div HR</option>
+              <option>Div Finance</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Procurement Name</label>
+            <input type="text" formControlName="procNm" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlSelect1">Procurement Method</label>
+            <select formControlName="mthd" class="form-select" id="exampleFormControlSelect1">
+              <option selected>Pelelangan</option>
+              <option>Pemilihan Langsung</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlSelect1">Stages</label>
+            <select formControlName="mthd" class="form-select" id="exampleFormControlSelect1">
+              <option selected>Procurement Registration</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlSelect1">Status</label>
+            <select formControlName="sts" class="form-select" id="exampleFormControlSelect1">
+            <option selected>New</option>
+            <option>Draft</option>
+            <option>Waiting Approval</option>
+            <option>Revision</option>
+            <option>Failed Draft</option>
+          </select>
+        </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Transaction Type</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Online" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Registration Type</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Invitation" readonly>
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlSelect1">Procurement Type</label>
+            <select class="form-select" id="exampleFormControlSelect1">
+              <option selected>Non-Construction</option>
+              <option>Construction</option>
+            </select>
+          </div>
+          <h5 class="modal-title mb-3" id="exampleModalLabel">Evaluation Methods</h5>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Announcement Number</label>
+            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlSelect1">Document Submission Type</label>
+            <select class="form-select" id="exampleFormControlSelect1">
+              <option selected>Satu Sampul</option>
+              <option>Dua Sampul</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlSelect1">Negotiation Type</label>
+            <select class="form-select" id="exampleFormControlSelect1">
+              <option selected>Online Negotiation</option>
+              <option>Offline Negotiation</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlSelect1">Price Evaluation</label>
+            <select class="form-select" id="exampleFormControlSelect1">
+              <option selected>Auction</option>
+              <option>Non-Auction</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlSelect1">Bidding Evaluation</label>
+            <select class="form-select" id="exampleFormControlSelect1">
+              <option selected>Merrit Point</option>
+              <option>Non-Merrit Point</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlSelect1">Bidding Submission Type</label>
+            <select class="form-select" id="exampleFormControlSelect1">
+              <option selected>Unit Price</option>
+              <option>Non-Unit Price</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlSelect1">Vendor Selection</label>
+            <select class="form-select" id="exampleFormControlSelect1">
+              <option selected>Single Winner</option>
+              <option>Double Winner</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label for="exampleFormControlSelect1">Currency Type</label>
+            <select class="form-select" id="exampleFormControlSelect1">
+              <option selected>Single Currency</option>
+              <option>Double Currency</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" *ngIf="showAdd" (click)="postExpenses()" class="btn btn-dark">Add</button>
+        <button type="button" *ngIf="showModify" (click)="updateBtnExpenses()" class="btn btn-dark">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

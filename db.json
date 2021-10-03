@@ -4,6 +4,42 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "procNo": 1243223243,
+      "div": "Div IT",
+      "procNm": "Dimas Yudha Pratama",
+      "mthd": "Pelelangan",
+      "stg": "Procurement Registration",
+      "sts": "Draft",
+      "id": 2
+    },
+    {
+      "procNo": 1243243,
+      "div": "Div IT",
+      "procNm": "Yudha",
+      "mthd": "Pelelangan",
+      "stg": "Procurement Registration",
+      "sts": "Draft",
+      "id": 3
+    },
+    {
+      "procNo": 122133,
+      "div": "Div IT",
+      "procNm": "Dimas",
+      "mthd": "Pelelangan",
+      "stg": "Procurement Registration",
+      "sts": "Draft",
+      "id": 4
+    },
+    {
+      "procNo": 123,
+      "div": "Div Procurement",
+      "procNm": "Pratama",
+      "mthd": "Pelelangan",
+      "stg": "Procurement Registration",
+      "sts": "Draft",
+      "id": 5
     }
   ],
   "comments": [
