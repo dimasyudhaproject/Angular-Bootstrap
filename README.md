@@ -53,8 +53,8 @@ json-server --watch db.json
 
 👤 **Dimas Yudha Pratama**
 
-* Website: https://github.com/dimasyudhaproject/
-* Twitter: [@dmsydha](https://twitter.com/fsdimasyudha)
+* Website: https://github.com/dimasyudhaproject
+* Twitter: [@fsdimasyudha](https://twitter.com/fsdimasyudha)
 * Github: [@fsdimasyudha](https://github.com/fsdimasyudha)
 * LinkedIn: [@dimas-yudha-pratama-a4a665216](https://linkedin.com/in/dimas-yudha-pratama-a4a665216)
 
